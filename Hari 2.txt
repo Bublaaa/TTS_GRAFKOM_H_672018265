@@ -1,0 +1,77 @@
+#include <iostream>
+#include <GL/freeglut.h>
+float delta_x = 15.0f;
+float delta_y = 15.0f;
+float x_pos = 0.0f;
+float y_pos = 0.0f;
+float x,y;
+void display() {
+	glClear(GL_COLOR_BUFFER_BIT);
+	for (y = 0; y <= 20; y = y + 10) {
+		delta_y = y;
+		for (x = 0; x <= 20; x = x + 10)
+		{
+			delta_x = x;
+			glBegin(GL_LINE_LOOP);
+			glVertex2f(1+x_pos, 4+y_pos);
+			glVertex2f(1+x_pos, 5+y_pos);
+			glVertex2f(2+x_pos, 5+y_pos);
+			glVertex2f(2+x_pos, 6+y_pos);
+			glVertex2f(3+x_pos, 6+y_pos);
+			glVertex2f(3+x_pos, 5+y_pos);
+			glVertex2f(4+x_pos, 5+y_pos);
+
+			glVertex2f(4 + x_pos, 11 + y_pos);
+			glVertex2f(5 + x_pos, 11 + y_pos);
+			glVertex2f(5 + x_pos, 10 + y_pos);
+			glVertex2f(6 + x_pos, 10 + y_pos);
+			glVertex2f(6 + x_pos, 9 + y_pos);
+			glVertex2f(5 + x_pos, 9 + y_pos);
+			glVertex2f(5 + x_pos, 8 + y_pos);
+
+			glVertex2f(11 + x_pos, 8 + y_pos);
+			glVertex2f(11 + x_pos, 7 + y_pos);
+			glVertex2f(10 + x_pos, 7 + y_pos);
+			glVertex2f(10 + x_pos, 6 + y_pos);
+			glVertex2f(9 + x_pos, 6 + y_pos);
+			glVertex2f(9 + x_pos, 7 + y_pos);
+			glVertex2f(8 + x_pos, 7 + y_pos);
+
+			glVertex2f(8 + x_pos, 1 + y_pos);
+			glVertex2f(7 + x_pos, 1 + y_pos);
+			glVertex2f(7 + x_pos, 2 + y_pos);
+			glVertex2f(6 + x_pos, 2 + y_pos);
+			glVertex2f(6 + x_pos, 3 + y_pos);
+			glVertex2f(7 + x_pos, 3 + y_pos);
+			glVertex2f(7 + x_pos, 4 + y_pos);
+			glEnd();
+			glEnd();
+			x_pos = +delta_x;
+		}
+		y_pos =+ y ;
+	}
+	glFlush();
+}
+
+void myinit() {
+	glClearColor(1.0, 1.0, 1.0, 1.0);
+	glColor3f(1.0, 0.0, 0.0);
+	glPointSize(10.0);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(0.0, 50.0, 0.0, 50.0);
+}
+
+int main(int argc, char** argv) {
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitWindowSize(50, 50);
+	glutInitWindowPosition(0, 0);
+	glutCreateWindow("TTS");
+	glutDisplayFunc(display);
+
+	myinit();
+	glutMainLoop();
+
+	return 0;
+}

@@ -1,0 +1,228 @@
+#include <iostream>
+#include <GL/freeglut.h>
+float delta_x = 12.0f;
+float delta_y = 1.0f;
+float x_pos = 0.0f;
+float y_pos = 1.0f;
+int x, y;
+void display() {
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(0.1, 0.1, 0.1);
+	for (x = 0; x <= 48; x = x + 12) {
+		delta_x = x;
+		glBegin(GL_LINE_LOOP);
+		glVertex2f(1 + x_pos, 7 + y_pos); //1
+		glVertex2f(1 + x_pos, 9 + y_pos); //2
+		glVertex2f(2 + x_pos, 9 + y_pos); //3
+		glVertex2f(2 + x_pos, 11 + y_pos); //4
+		glVertex2f(3 + x_pos, 11 + y_pos); //5
+		glVertex2f(3 + x_pos, 9 + y_pos); //6
+		glVertex2f(4 + x_pos, 9 + y_pos); //7
+
+		glVertex2f(4 + x_pos, 18 + y_pos); //8
+		glVertex2f(5 + x_pos, 18 + y_pos); //9
+		glVertex2f(5 + x_pos, 16 + y_pos); //10
+		glVertex2f(6 + x_pos, 16 + y_pos); //11
+		glVertex2f(6 + x_pos, 14 + y_pos); //12
+		glVertex2f(5 + x_pos, 14 + y_pos); //13
+		glVertex2f(5 + x_pos, 12 + y_pos); //14
+
+		glVertex2f(11 + x_pos, 12 + y_pos); //15
+		glVertex2f(11 + x_pos, 10 + y_pos); //16
+		glVertex2f(10 + x_pos, 10 + y_pos); //17
+		glVertex2f(10 + x_pos, 8 + y_pos); //18
+		glVertex2f(9 + x_pos, 8 + y_pos); //19
+		glVertex2f(9 + x_pos, 10 + y_pos); //20
+		glVertex2f(8 + x_pos, 10 + y_pos); //21
+
+		glVertex2f(8 + x_pos, 1 + y_pos); //22
+		glVertex2f(7 + x_pos, 1 + y_pos); //23
+		glVertex2f(7 + x_pos, 3 + y_pos); //24
+		glVertex2f(6 + x_pos, 3 + y_pos); //25
+		glVertex2f(6 + x_pos, 5 + y_pos); //26
+		glVertex2f(7 + x_pos, 5 + y_pos); //27
+		glVertex2f(7 + x_pos, 7 + y_pos); //28
+		glEnd(); 
+		x_pos =+ delta_x;
+		y_pos =+ (x/6);
+	}
+	for (x = 8; x <= 48; x = x + 12) {
+		delta_x = x;
+		glBegin(GL_LINE_LOOP);
+		glVertex2f(1 + x_pos, 7 + y_pos); //1
+		glVertex2f(1 + x_pos, 9 + y_pos); //2
+		glVertex2f(2 + x_pos, 9 + y_pos); //3
+		glVertex2f(2 + x_pos, 11 + y_pos); //4
+		glVertex2f(3 + x_pos, 11 + y_pos); //5
+		glVertex2f(3 + x_pos, 9 + y_pos); //6
+		glVertex2f(4 + x_pos, 9 + y_pos); //7
+
+		glVertex2f(4 + x_pos, 18 + y_pos); //8
+		glVertex2f(5 + x_pos, 18 + y_pos); //9
+		glVertex2f(5 + x_pos, 16 + y_pos); //10
+		glVertex2f(6 + x_pos, 16 + y_pos); //11
+		glVertex2f(6 + x_pos, 14 + y_pos); //12
+		glVertex2f(5 + x_pos, 14 + y_pos); //13
+		glVertex2f(5 + x_pos, 12 + y_pos); //14
+
+		glVertex2f(11 + x_pos, 12 + y_pos); //15
+		glVertex2f(11 + x_pos, 10 + y_pos); //16
+		glVertex2f(10 + x_pos, 10 + y_pos); //17
+		glVertex2f(10 + x_pos, 8 + y_pos); //18
+		glVertex2f(9 + x_pos, 8 + y_pos); //19
+		glVertex2f(9 + x_pos, 10 + y_pos); //20
+		glVertex2f(8 + x_pos, 10 + y_pos); //21
+
+		glVertex2f(8 + x_pos, 1 + y_pos); //22
+		glVertex2f(7 + x_pos, 1 + y_pos); //23
+		glVertex2f(7 + x_pos, 3 + y_pos); //24
+		glVertex2f(6 + x_pos, 3 + y_pos); //25
+		glVertex2f(6 + x_pos, 5 + y_pos); //26
+		glVertex2f(7 + x_pos, 5 + y_pos); //27
+		glVertex2f(7 + x_pos, 7 + y_pos); //28
+		glEnd();
+		x_pos = +delta_x -4 ;
+		y_pos =+ (x / 6) + 4;
+	}
+	for (x = 8; x <= 48; x = x + 12) {
+		delta_x = x;
+		glBegin(GL_LINE_LOOP);
+		glVertex2f(1 + x_pos, 7 + y_pos); //1
+		glVertex2f(1 + x_pos, 9 + y_pos); //2
+		glVertex2f(2 + x_pos, 9 + y_pos); //3
+		glVertex2f(2 + x_pos, 11 + y_pos); //4
+		glVertex2f(3 + x_pos, 11 + y_pos); //5
+		glVertex2f(3 + x_pos, 9 + y_pos); //6
+		glVertex2f(4 + x_pos, 9 + y_pos); //7
+
+		glVertex2f(4 + x_pos, 18 + y_pos); //8
+		glVertex2f(5 + x_pos, 18 + y_pos); //9
+		glVertex2f(5 + x_pos, 16 + y_pos); //10
+		glVertex2f(6 + x_pos, 16 + y_pos); //11
+		glVertex2f(6 + x_pos, 14 + y_pos); //12
+		glVertex2f(5 + x_pos, 14 + y_pos); //13
+		glVertex2f(5 + x_pos, 12 + y_pos); //14
+
+		glVertex2f(11 + x_pos, 12 + y_pos); //15
+		glVertex2f(11 + x_pos, 10 + y_pos); //16
+		glVertex2f(10 + x_pos, 10 + y_pos); //17
+		glVertex2f(10 + x_pos, 8 + y_pos); //18
+		glVertex2f(9 + x_pos, 8 + y_pos); //19
+		glVertex2f(9 + x_pos, 10 + y_pos); //20
+		glVertex2f(8 + x_pos, 10 + y_pos); //21
+
+		glVertex2f(8 + x_pos, 1 + y_pos); //22
+		glVertex2f(7 + x_pos, 1 + y_pos); //23
+		glVertex2f(7 + x_pos, 3 + y_pos); //24
+		glVertex2f(6 + x_pos, 3 + y_pos); //25
+		glVertex2f(6 + x_pos, 5 + y_pos); //26
+		glVertex2f(7 + x_pos, 5 + y_pos); //27
+		glVertex2f(7 + x_pos, 7 + y_pos); //28
+		glEnd();
+		x_pos = +delta_x - 12;
+		y_pos = +(x / 6) +7;
+	}
+
+	for (x = 0; x <= 48; x = x + 12) {
+		delta_x = x;
+		glBegin(GL_LINE_STRIP);
+		glVertex2f(1 + x_pos, 7 + y_pos); //1
+		glVertex2f(1 + x_pos, 9 + y_pos); //2
+		glVertex2f(2 + x_pos, 9 + y_pos); //3
+		glVertex2f(2 + x_pos, 11 + y_pos); //4
+		glVertex2f(3 + x_pos, 11 + y_pos); //5
+		glVertex2f(3 + x_pos, 9 + y_pos); //6
+		glVertex2f(4 + x_pos, 9 + y_pos); //7
+
+		glVertex2f(4 + x_pos, 18 + y_pos); //8
+		glVertex2f(5 + x_pos, 18 + y_pos); //9
+		glVertex2f(5 + x_pos, 16 + y_pos); //10
+		glVertex2f(6 + x_pos, 16 + y_pos); //11
+		glVertex2f(6 + x_pos, 14 + y_pos); //12
+		glVertex2f(5 + x_pos, 14 + y_pos); //13
+		glVertex2f(5 + x_pos, 12 + y_pos); //14
+
+		glVertex2f(11 + x_pos, 12 + y_pos); //15
+		glVertex2f(11 + x_pos, 10 + y_pos); //16
+		glVertex2f(10 + x_pos, 10 + y_pos); //17
+		glVertex2f(10 + x_pos, 8 + y_pos); //18
+		glVertex2f(9 + x_pos, 8 + y_pos); //19
+		glVertex2f(9 + x_pos, 10 + y_pos); //20
+		glVertex2f(8 + x_pos, 10 + y_pos); //21
+
+		glVertex2f(8 + x_pos, 1 + y_pos); //22
+		glVertex2f(7 + x_pos, 1 + y_pos); //23
+		glVertex2f(7 + x_pos, 3 + y_pos); //24
+		glVertex2f(6 + x_pos, 3 + y_pos); //25
+		glVertex2f(6 + x_pos, 5 + y_pos); //26
+		glVertex2f(7 + x_pos, 5 + y_pos); //27
+		glVertex2f(7 + x_pos, 7 + y_pos); //28
+		glEnd();
+		x_pos = +delta_x;
+		y_pos = +(x / 6)+13;
+	}
+
+	for (x = 0; x <= 48; x = x + 12) {
+		delta_x = x;
+		glBegin(GL_POINT);
+		glVertex2f(1 + x_pos, 7 + y_pos); //1
+		glVertex2f(1 + x_pos, 9 + y_pos); //2
+		glVertex2f(2 + x_pos, 9 + y_pos); //3
+		glVertex2f(2 + x_pos, 11 + y_pos); //4
+		glVertex2f(3 + x_pos, 11 + y_pos); //5
+		glVertex2f(3 + x_pos, 9 + y_pos); //6
+		glVertex2f(4 + x_pos, 9 + y_pos); //7
+
+		glVertex2f(4 + x_pos, 18 + y_pos); //8
+		glVertex2f(5 + x_pos, 18 + y_pos); //9
+		glVertex2f(5 + x_pos, 16 + y_pos); //10
+		glVertex2f(6 + x_pos, 16 + y_pos); //11
+		glVertex2f(6 + x_pos, 14 + y_pos); //12
+		glVertex2f(5 + x_pos, 14 + y_pos); //13
+		glVertex2f(5 + x_pos, 12 + y_pos); //14
+
+		glVertex2f(11 + x_pos, 12 + y_pos); //15
+		glVertex2f(11 + x_pos, 10 + y_pos); //16
+		glVertex2f(10 + x_pos, 10 + y_pos); //17
+		glVertex2f(10 + x_pos, 8 + y_pos); //18
+		glVertex2f(9 + x_pos, 8 + y_pos); //19
+		glVertex2f(9 + x_pos, 10 + y_pos); //20
+		glVertex2f(8 + x_pos, 10 + y_pos); //21
+
+		glVertex2f(8 + x_pos, 1 + y_pos); //22
+		glVertex2f(7 + x_pos, 1 + y_pos); //23
+		glVertex2f(7 + x_pos, 3 + y_pos); //24
+		glVertex2f(6 + x_pos, 3 + y_pos); //25
+		glVertex2f(6 + x_pos, 5 + y_pos); //26
+		glVertex2f(7 + x_pos, 5 + y_pos); //27
+		glVertex2f(7 + x_pos, 7 + y_pos); //28
+		glEnd();
+		x_pos = +delta_x;
+		y_pos = +(x / 6) + 13;
+	}
+	glFlush();
+}
+
+void myinit() {
+	glClearColor(0.8, 0.8, 0.8, 0.0);
+	glColor3f(0.9, 0.9, 0.9);
+	glPointSize(10.0);
+	glLineWidth(40);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(0.0, 24.0, 5.0, 24.0);
+}
+
+int main(int argc, char** argv) {
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitWindowSize(500, 300);
+	glutInitWindowPosition(0, 0);
+	glutCreateWindow("TTS");
+	glutDisplayFunc(display);
+
+	myinit();
+	glutMainLoop();
+
+	return 0;
+}

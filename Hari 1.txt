@@ -1,0 +1,62 @@
+#include <iostream>
+#include <GL/freeglut.h>
+
+void display() {
+	glClear(GL_COLOR_BUFFER_BIT);
+	glBegin(GL_LINE_LOOP);
+	glVertex2i(1, 4);
+	glVertex2i(1, 5);
+	glVertex2i(2, 5);
+	glVertex2i(2, 6);
+	glVertex2i(3, 6);
+	glVertex2i(3, 5);
+	glVertex2i(4, 5);
+
+	glVertex2i(4, 11);
+	glVertex2i(5, 11);
+	glVertex2i(5, 10);
+	glVertex2i(6, 10);
+	glVertex2i(6, 9);
+	glVertex2i(5, 9);
+	glVertex2i(5, 8);
+
+	glVertex2i(11, 8);
+	glVertex2i(11, 7);
+	glVertex2i(10, 7);
+	glVertex2i(10, 6);
+	glVertex2i(9, 6);
+	glVertex2i(9, 7);
+	glVertex2i(8, 7);
+
+	glVertex2i(8, 1);
+	glVertex2i(7, 1);
+	glVertex2i(7, 2);
+	glVertex2i(6, 2);
+	glVertex2i(6, 3);
+	glVertex2i(7, 3);
+	glVertex2i(7, 4);
+	glEnd();
+	glFlush();
+}
+
+void myinit() {
+	glClearColor(0.0, 0.01, 0.01, 0.0);
+	glColor3f(1.0, 1.0, 1.0);
+	glPointSize(6.0f);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(0.0f, 40.0f, 0.0f, 40.0f);
+}
+
+int main(int argc, char** argv) {
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitWindowSize(400, 400);
+	glutInitWindowPosition(0, 0);
+	glutCreateWindow("TTS");
+	myinit();
+	glutDisplayFunc(display);
+	glutMainLoop();
+
+	return 0;
+}
